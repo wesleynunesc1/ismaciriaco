@@ -35,23 +35,23 @@ export const DigitalVinylExperience: React.FC = () => {
         {/* Real Vinyl Composition with IMG_8202 */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Visual Presentation: Real Album Artwork Photo (IMG_8202) */}
+          {/* Visual Presentation: Real Photo of Isma with Electric Bass in Studio */}
           <div className="lg:col-span-6 flex justify-center items-center">
             <div className="relative w-full max-w-[480px] aspect-square rounded-2xl overflow-hidden border border-surface-divider shadow-[0_25px_60px_rgba(0,0,0,0.95)] group bg-black">
               <Image
-                src="/media/music/samba-for-the-world-vinyl.jpg"
-                alt="Samba for the World - Real Luxury Vinyl Edition"
+                src="/media/hero/isma-hero-bass.jpg"
+                alt="Isma Ciriaco - Samba for the World Sessions"
                 fill
                 sizes="(max-width: 768px) 100vw, 480px"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover object-center filter contrast-[1.08] brightness-[0.95] group-hover:scale-105 transition-transform duration-700 ease-out"
                 priority
               />
 
               {/* Minimal Editorial Badge */}
-              <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md px-4 py-3 rounded-xl border border-surface-divider flex items-center justify-between text-xs">
+              <div className="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md px-4 py-3 rounded-xl border border-surface-divider flex items-center justify-between text-xs">
                 <div>
                   <span className="font-bold text-white block">Samba for the World</span>
-                  <span className="text-[10px] text-misty/60 font-mono">EDITION NOIR • DIGITAL & VINYL</span>
+                  <span className="text-[10px] text-misty/60 font-mono">EDITION NOIR • SESSÕES DE CONTRABAIXO</span>
                 </div>
                 <span className="text-[10px] font-mono text-crimson-vivid font-bold uppercase">
                   ISMA CIRIACO

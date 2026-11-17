@@ -101,7 +101,7 @@ export default function EpkPage() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-surface-divider">
                   <div className="relative w-20 h-10 shrink-0">
                     <Image
-                      src="/media/brands/dr-strings-partner.png"
+                      src="/media/brands/aguilar-partner.png"
                       alt="DR Strings Logo"
                       fill
                       className="object-contain"
@@ -116,7 +116,7 @@ export default function EpkPage() {
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-surface-divider">
                   <div className="relative w-20 h-10 shrink-0">
                     <Image
-                      src="/media/brands/aguilar-partner.png"
+                      src="/media/brands/dr-strings-partner.png"
                       alt="Aguilar Amplification Logo"
                       fill
                       className="object-contain"

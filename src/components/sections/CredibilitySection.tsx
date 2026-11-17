@@ -68,7 +68,7 @@ export const CredibilitySection: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="relative h-12 w-28">
                       <Image
-                        src="/media/brands/dr-strings-partner.png"
+                        src="/media/brands/aguilar-partner.png"
                         alt="DR Strings Official Brand"
                         fill
                         className="object-contain object-left filter contrast-125"
@@ -94,7 +94,7 @@ export const CredibilitySection: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="relative h-12 w-28">
                       <Image
-                        src="/media/brands/aguilar-partner.png"
+                        src="/media/brands/dr-strings-partner.png"
                         alt="Aguilar Amplification NYC Official Brand"
                         fill
                         className="object-contain object-left filter contrast-125"
