@@ -10,15 +10,15 @@ interface LogoProps {
 
 export const IsmaLogo: React.FC<LogoProps> = ({
   className = "",
-  size = 46,
+  size = 40,
   monogramOnly = false,
   withText = true,
 }) => {
   return (
     <div className={`inline-flex items-center gap-3.5 select-none ${className}`}>
-      {/* Official circular monogram from IMG_0922 */}
+      {/* Official circular monogram */}
       <div
-        className="relative rounded-full overflow-hidden border border-misty/20 bg-surface shadow-md flex items-center justify-center shrink-0"
+        className="relative rounded-full overflow-hidden border border-graphite bg-black flex items-center justify-center shrink-0"
         style={{ width: size, height: size }}
       >
         <Image
@@ -33,11 +33,11 @@ export const IsmaLogo: React.FC<LogoProps> = ({
 
       {!monogramOnly && withText && (
         <div className="flex flex-col tracking-tight">
-          <span className="font-extrabold tracking-tightest text-misty text-base leading-none uppercase">
+          <span className="font-serif text-lg font-medium text-beige tracking-wide leading-none uppercase">
             ISMA CIRIACO
           </span>
-          <span className="text-[9px] tracking-widest text-misty/60 uppercase mt-1 font-semibold">
-            BRAZILIAN JAZZ BASS
+          <span className="text-[9px] tracking-widest text-gold uppercase mt-1 font-sans">
+            BRAZILIAN BASS PLAYER
           </span>
         </div>
       )}

@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Isma Ciriaco | Brazilian Jazz Bassist & Music Producer",
+  title: "Isma Ciriaco | Brazilian Bass Player, Composer & Producer",
   description:
-    "Site oficial de Isma Ciriaco. Contrabaixista brasileiro, produtor musical e educador radicado em Austin, Texas. Brazilian Jazz, Samba, Bossa Nova, Fusion e Baixo Brazil One.",
+    "Site oficial de Isma Ciriaco. Contrabaixista brasileiro, compositor, produtor musical e educador radicado em Austin, Texas. Conectando as raízes brasileiras à sofisticação do jazz contemporâneo.",
   keywords: [
     "Isma Ciriaco",
     "Brazilian Jazz Bassist",
@@ -28,9 +35,9 @@ export const metadata: Metadata = {
     "Aguilar Amplification",
   ],
   openGraph: {
-    title: "Isma Ciriaco | Brazilian Jazz Bassist & Music Producer",
+    title: "Isma Ciriaco | Official Artist Website",
     description:
-      "Mais de 35 anos conectando culturas através do contrabaixo, do jazz e da música brasileira. Shows, gravações em estúdio e educação musical.",
+      "A música brasileira como identidade. O mundo como palco. Mais de 35 anos de trajetória musical de Isma Ciriaco.",
     siteName: "Isma Ciriaco Official",
     locale: "pt_BR",
     type: "website",
@@ -43,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${manrope.variable} dark`}>
-      <body className="bg-raven text-misty antialiased selection:bg-crimson-vivid selection:text-white">
+    <html lang="pt-BR" className={`${cormorant.variable} ${manrope.variable} dark`}>
+      <body className="bg-black text-beige antialiased selection:bg-gold selection:text-black">
         <LanguageProvider>
           <Navbar />
           <main className="min-h-screen">{children}</main>

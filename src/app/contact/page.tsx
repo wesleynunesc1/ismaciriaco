@@ -53,17 +53,17 @@ ${formData.message}`;
   };
 
   return (
-    <div className="pt-28 pb-36 bg-raven text-misty min-h-screen">
+    <div className="pt-28 pb-36 bg-black text-beige min-h-screen">
       {/* Page Hero */}
-      <section className="relative py-20 border-b border-surface-divider overflow-hidden">
+      <section className="relative py-20 border-b border-graphite overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <span className="text-xs font-mono font-bold tracking-widest text-crimson-vivid uppercase block mb-4">
+          <span className="text-xs font-mono font-bold tracking-widest text-gold uppercase block mb-4">
             [ ATENDIMENTO COMERCIAL & BOOKING ]
           </span>
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-white tracking-tightest leading-[0.98] uppercase mb-8">
             CONTRATAR ISMA CIRIACO.
           </h1>
-          <p className="text-lg md:text-xl text-misty/80 max-w-3xl leading-relaxed font-normal">
+          <p className="text-lg md:text-xl text-beige/80 max-w-3xl leading-relaxed font-normal">
             Canais diretos para shows, festivais, gravações em estúdio, produção musical, masterclasses e parcerias comerciais nos Estados Unidos e Brasil.
           </p>
         </div>
@@ -74,22 +74,22 @@ ${formData.message}`;
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Booking Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 md:p-12 rounded-3xl bg-surface border border-surface-divider shadow-2xl">
+            <div className="p-8 md:p-12 rounded-3xl bg-surface border border-graphite shadow-2xl">
               <h3 className="text-2xl font-bold text-white mb-2">Formulário de Atendimento Direto</h3>
-              <p className="text-xs sm:text-sm text-misty/70 mb-8">
+              <p className="text-xs sm:text-sm text-beige/70 mb-8">
                 Preencha os dados abaixo para direcionamento imediato ao canal de booking verificado.
               </p>
 
               {submitted && (
-                <div className="p-4 rounded-xl bg-crimson-antique/30 border border-crimson-vivid text-white text-xs sm:text-sm flex items-center gap-3 mb-6">
-                  <CheckCircle2 className="w-5 h-5 text-crimson-vivid shrink-0" />
+                <div className="p-4 rounded-xl bg-graphite/40 border border-gold text-white text-xs sm:text-sm flex items-center gap-3 mb-6">
+                  <CheckCircle2 className="w-5 h-5 text-gold shrink-0" />
                   <span>Sua solicitação foi processada e direcionada ao WhatsApp oficial de Isma Ciriaco!</span>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                     Nome Completo ou Empresa / Festival *
                   </label>
                   <input
@@ -98,13 +98,13 @@ ${formData.message}`;
                     placeholder="Ex: João Silva ou Austin Jazz Festival"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                    <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                       E-mail Profissional *
                     </label>
                     <input
@@ -113,11 +113,11 @@ ${formData.message}`;
                       placeholder="seuemail@exemplo.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                    <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                       WhatsApp / Telefone com DDD *
                     </label>
                     <input
@@ -126,20 +126,20 @@ ${formData.message}`;
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                    <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                       Categoria de Interesse *
                     </label>
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                     >
                       <option value="Performance Booking">Shows & Festivais (Performance)</option>
                       <option value="Studio Recording">Gravação em Estúdio (Bass Tracking)</option>
@@ -152,13 +152,13 @@ ${formData.message}`;
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                    <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                       Local do Evento / País *
                     </label>
                     <select
                       value={formData.country}
                       onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                     >
                       <option value="USA">Estados Unidos (Austin, TX & Demais Estados)</option>
                       <option value="Brasil">Brasil</option>
@@ -168,7 +168,7 @@ ${formData.message}`;
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                     Data Prevista / Prazo Desejado
                   </label>
                   <input
@@ -176,12 +176,12 @@ ${formData.message}`;
                     placeholder="Ex: 15 de Outubro ou Flexível"
                     value={formData.eventDate}
                     onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-misty/70 uppercase tracking-wider block mb-2">
+                  <label className="text-xs font-semibold text-beige/70 uppercase tracking-wider block mb-2">
                     Detalhes do Projeto ou Evento *
                   </label>
                   <textarea
@@ -190,7 +190,7 @@ ${formData.message}`;
                     placeholder="Descreva o formato (solo, trio, banda), localidade, duração estimada e detalhes da proposta."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-surface-divider text-white text-sm focus:outline-none focus:border-crimson-vivid transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-surface-elevated border border-graphite text-white text-sm focus:outline-none focus:border-gold transition-colors"
                   />
                 </div>
 
@@ -207,69 +207,69 @@ ${formData.message}`;
 
           {/* Right Column: Direct Verified Contacts */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-surface border border-surface-divider space-y-6">
-              <span className="text-xs font-mono font-bold text-crimson-vivid uppercase tracking-widest block">
+            <div className="p-8 rounded-3xl bg-surface border border-graphite space-y-6">
+              <span className="text-xs font-mono font-bold text-gold uppercase tracking-widest block">
                 CANAIS DIRETOS VERIFICADOS
               </span>
 
               <div className="space-y-6">
-                <div className="p-5 rounded-2xl bg-surface-elevated border border-surface-divider">
+                <div className="p-5 rounded-2xl bg-surface-elevated border border-graphite">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-crimson-vivid">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-gold">
                       EUA & Internacional
                     </span>
-                    <span className="text-[10px] text-misty/40">Austin, Texas</span>
+                    <span className="text-[10px] text-beige/40">Austin, Texas</span>
                   </div>
                   <a
                     href={`https://wa.me/${ARTIST_DATA.contacts.usPhoneRaw.replace(/\D/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base font-mono font-bold text-white hover:text-crimson-vivid transition-colors flex items-center justify-between group"
+                    className="text-base font-mono font-bold text-white hover:text-gold transition-colors flex items-center justify-between group"
                   >
                     <span>{ARTIST_DATA.contacts.usPhone}</span>
-                    <ArrowUpRight className="w-4 h-4 text-crimson-vivid group-hover:translate-x-1 transition-transform" />
+                    <ArrowUpRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-surface-elevated border border-surface-divider">
+                <div className="p-5 rounded-2xl bg-surface-elevated border border-graphite">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-crimson-vivid">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-gold">
                       Brasil & América do Sul
                     </span>
-                    <span className="text-[10px] text-misty/40">Minas Gerais / SP</span>
+                    <span className="text-[10px] text-beige/40">Minas Gerais / SP</span>
                   </div>
                   <a
                     href={`https://wa.me/${ARTIST_DATA.contacts.brPhoneRaw.replace(/\D/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base font-mono font-bold text-white hover:text-crimson-vivid transition-colors flex items-center justify-between group"
+                    className="text-base font-mono font-bold text-white hover:text-gold transition-colors flex items-center justify-between group"
                   >
                     <span>{ARTIST_DATA.contacts.brPhone}</span>
-                    <ArrowUpRight className="w-4 h-4 text-crimson-vivid group-hover:translate-x-1 transition-transform" />
+                    <ArrowUpRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-surface-elevated border border-surface-divider">
+                <div className="p-5 rounded-2xl bg-surface-elevated border border-graphite">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-crimson-vivid">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-gold">
                       Instagram Oficial
                     </span>
-                    <span className="text-[10px] text-misty/40">Mídias & Lançamentos</span>
+                    <span className="text-[10px] text-beige/40">Mídias & Lançamentos</span>
                   </div>
                   <a
                     href={ARTIST_DATA.contacts.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-base font-bold text-white hover:text-crimson-vivid transition-colors flex items-center justify-between group"
+                    className="text-base font-bold text-white hover:text-gold transition-colors flex items-center justify-between group"
                   >
                     <span>{ARTIST_DATA.contacts.instagramHandle}</span>
-                    <ArrowUpRight className="w-4 h-4 text-crimson-vivid group-hover:translate-x-1 transition-transform" />
+                    <ArrowUpRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 rounded-3xl bg-surface-elevated border border-surface-divider text-xs text-misty/60 leading-relaxed space-y-2">
+            <div className="p-6 rounded-3xl bg-surface-elevated border border-graphite text-xs text-beige/60 leading-relaxed space-y-2">
               <span className="font-bold text-white uppercase block">
                 Condições de Contratação:
               </span>
@@ -292,7 +292,7 @@ ${formData.message}`;
 
 export default function ContactPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-raven flex items-center justify-center text-misty">Carregando...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-beige">Carregando...</div>}>
       <ContactContent />
     </Suspense>
   );

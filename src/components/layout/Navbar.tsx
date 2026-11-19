@@ -36,33 +36,33 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-raven/90 backdrop-blur-md border-b border-surface-divider py-3.5 shadow-2xl"
-          : "bg-gradient-to-b from-raven/80 to-transparent py-5"
+          ? "bg-black/95 backdrop-blur-md border-b border-graphite py-3.5 shadow-xl"
+          : "bg-gradient-to-b from-black/90 via-black/50 to-transparent py-4 md:py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Monogram */}
         <Link href="/" className="group flex items-center">
-          <IsmaLogo />
+          <IsmaLogo size={38} withText={false} />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-wide font-medium transition-colors duration-200 relative py-1 ${
+                className={`text-xs tracking-widest font-sans uppercase transition-colors duration-200 relative py-1 ${
                   isActive
-                    ? "text-white font-bold"
-                    : "text-misty/70 hover:text-misty"
+                    ? "text-gold font-semibold"
+                    : "text-beige/70 hover:text-beige"
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-crimson-vivid" />
+                  <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-gold" />
                 )}
               </Link>
             );
@@ -70,24 +70,22 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Right CTA & Lang Switcher */}
-        <div className="hidden lg:flex items-center gap-4">
-          {/* Language Toggle */}
+        <div className="hidden lg:flex items-center gap-5">
           <button
             onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-misty/20 text-xs font-semibold text-misty/80 hover:text-white hover:border-misty/50 transition-all"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-graphite text-[11px] font-sans text-beige/70 hover:text-beige hover:border-gold transition-all"
             title="Mudar idioma / Switch language"
           >
-            <Globe className="w-3.5 h-3.5 text-crimson-vivid" />
-            <span className={locale === "pt" ? "text-crimson-vivid font-bold" : ""}>PT</span>
-            <span className="text-misty/30">/</span>
-            <span className={locale === "en" ? "text-crimson-vivid font-bold" : ""}>EN</span>
+            <Globe className="w-3 h-3 text-gold" />
+            <span className={locale === "pt" ? "text-gold font-semibold" : ""}>PT</span>
+            <span className="text-graphite">/</span>
+            <span className={locale === "en" ? "text-gold font-semibold" : ""}>EN</span>
           </button>
 
-          {/* Booking Pill Button */}
           <PillButton
             href="/contact"
             variant="accent"
-            className="!py-2.5 !px-5 !text-xs uppercase"
+            className="!py-2 !px-4 !text-[11px] uppercase tracking-widest font-sans"
           >
             {t.nav.bookCta}
           </PillButton>
@@ -97,24 +95,24 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
-            className="px-2.5 py-1 rounded-full border border-misty/20 text-[11px] font-bold text-misty/80"
+            className="px-2.5 py-1 rounded-full border border-graphite text-[10px] font-bold text-beige/80"
           >
             {locale.toUpperCase()}
           </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-misty hover:text-white focus:outline-none"
-            aria-label="Abrir Menu"
+            className="p-1.5 text-beige hover:text-white focus:outline-none"
+            aria-label="Menu"
           >
-            {isOpen ? <X className="w-7 h-7 text-crimson-vivid" /> : <Menu className="w-7 h-7" />}
+            {isOpen ? <X className="w-6 h-6 text-gold" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-raven/98 border-b border-surface-divider px-6 py-8 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-black/98 border-b border-graphite px-6 py-8 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -123,12 +121,12 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-xl font-bold py-2 border-b border-surface-divider/40 flex items-center justify-between ${
-                    isActive ? "text-crimson-vivid" : "text-misty hover:text-white"
+                  className={`text-lg font-serif py-2 border-b border-graphite/40 flex items-center justify-between ${
+                    isActive ? "text-gold" : "text-beige hover:text-white"
                   }`}
                 >
                   <span>{link.label}</span>
-                  {isActive && <span className="w-2 h-2 rounded-full bg-crimson-vivid" />}
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-gold" />}
                 </Link>
               );
             })}
@@ -139,7 +137,7 @@ export const Navbar: React.FC = () => {
               href="/contact"
               variant="accent"
               onClick={() => setIsOpen(false)}
-              className="w-full justify-center !py-4"
+              className="w-full justify-center !py-3.5"
             >
               {t.nav.bookCta}
             </PillButton>

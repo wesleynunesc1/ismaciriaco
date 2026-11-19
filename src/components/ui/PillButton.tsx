@@ -27,42 +27,42 @@ export const PillButton: React.FC<PillButtonProps> = ({
   rel,
   withArrow = true,
 }) => {
-  // Variant styles matching prompt:
-  // PRIMARY: Warm off-white pill with black text and a black circular arrow.
-  // ACCENT: Vivid red pill with white text and a dark circular arrow.
-  // SECONDARY: Transparent pill with a subtle warm-white border.
+  // Editorial pill button:
+  // PRIMARY: Warm beige with black text, subtle gold/graphite details
+  // ACCENT: Warm gold pill with black text
+  // SECONDARY: Minimal dark border with beige text
   const baseClasses =
-    "group inline-flex items-center justify-between gap-4 font-bold rounded-full px-7 py-3.5 text-sm md:text-base tracking-tight transition-all duration-300 ease-out select-none active:scale-[0.98]";
+    "group inline-flex items-center justify-between gap-3.5 font-medium rounded-full px-6 py-3 text-xs md:text-sm tracking-wide transition-all duration-300 ease-out select-none active:scale-[0.98]";
 
   let variantClasses = "";
   let arrowCircleClasses = "";
 
   if (variant === "primary") {
     variantClasses =
-      "bg-misty text-raven hover:bg-white hover:shadow-[0_8px_30px_rgba(231,224,210,0.25)] border border-misty";
+      "bg-beige text-black hover:bg-white border border-beige";
     arrowCircleClasses =
-      "bg-raven text-misty group-hover:bg-crimson-vivid group-hover:text-white";
+      "bg-black text-beige group-hover:bg-gold group-hover:text-black";
   } else if (variant === "accent") {
     variantClasses =
-      "bg-crimson-vivid text-white hover:bg-[#d60000] hover:shadow-[0_8px_30px_rgba(183,0,0,0.4)] border border-crimson-vivid";
+      "bg-gold text-black hover:bg-gold-light border border-gold";
     arrowCircleClasses =
-      "bg-raven text-white group-hover:rotate-45";
+      "bg-black text-gold group-hover:rotate-45";
   } else {
     // secondary
     variantClasses =
-      "bg-transparent text-misty border border-misty/30 hover:border-misty hover:bg-misty/10";
+      "bg-transparent text-beige border border-graphite hover:border-gold hover:text-white";
     arrowCircleClasses =
-      "bg-surface-divider text-misty group-hover:bg-misty group-hover:text-raven";
+      "bg-graphite text-beige group-hover:bg-gold group-hover:text-black";
   }
 
   const content = (
     <>
-      <span className="font-semibold">{children}</span>
+      <span>{children}</span>
       {withArrow && (
         <span
-          className={`flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${arrowCircleClasses}`}
+          className={`flex items-center justify-center w-6 h-6 rounded-full transition-all duration-300 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${arrowCircleClasses}`}
         >
-          <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+          <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
         </span>
       )}
     </>

@@ -9,25 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        raven: "#0D0D0D",
-        crimson: {
-          antique: "#76070B",
-          vivid: "#B70000",
+        // Official Client-Approved Palette
+        black: "#080808",
+        raven: "#080808",
+        graphite: "#292929",
+        gold: {
+          DEFAULT: "#B89B73",
+          light: "#C7AE8A",
+          dark: "#A3865E",
         },
-        misty: "#E7E0D2",
+        beige: "#E7DED0",
+        misty: "#E7DED0",
         surface: {
-          DEFAULT: "#171717",
-          divider: "#262626",
-          elevated: "#1C1C1C",
-          subtle: "#121212",
+          DEFAULT: "#121212",
+          divider: "#292929",
+          elevated: "#181818",
+          subtle: "#0E0E0E",
         },
       },
       fontFamily: {
-        sans: ["var(--font-manrope)", "sans-serif"],
+        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        sans: ["var(--font-manrope)", "-apple-system", "sans-serif"],
       },
       letterSpacing: {
         tightest: "-0.04em",
         tighter: "-0.02em",
+        wide: "0.05em",
+        widest: "0.15em",
+        epic: "0.25em",
       },
       lineHeight: {
         tighter: "1.0",

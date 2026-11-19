@@ -13,13 +13,13 @@ export const DigitalVinylExperience: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-28 md:py-36 bg-raven text-misty overflow-hidden border-t border-surface-divider">
+    <section className="relative py-28 md:py-36 bg-black text-beige overflow-hidden border-t border-graphite">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson-antique/25 border border-crimson-antique/50 text-crimson-vivid text-xs font-bold uppercase tracking-widest mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-graphite/40 border border-graphite text-gold text-xs font-bold uppercase tracking-widest mb-4">
               <Disc3 className="w-3.5 h-3.5" />
               <span>{t.featuredRecord.badge}</span>
             </div>
@@ -27,7 +27,7 @@ export const DigitalVinylExperience: React.FC = () => {
               {t.featuredRecord.headline}
             </h2>
           </div>
-          <p className="text-sm font-semibold tracking-widest text-misty/50 uppercase md:text-right">
+          <p className="text-sm font-semibold tracking-widest text-beige/50 uppercase md:text-right">
             {t.featuredRecord.format}
           </p>
         </div>
@@ -37,7 +37,7 @@ export const DigitalVinylExperience: React.FC = () => {
           
           {/* Visual Presentation: Real Photo of Isma with Electric Bass in Studio */}
           <div className="lg:col-span-6 flex justify-center items-center">
-            <div className="relative w-full max-w-[480px] aspect-square rounded-2xl overflow-hidden border border-surface-divider shadow-[0_25px_60px_rgba(0,0,0,0.95)] group bg-black">
+            <div className="relative w-full max-w-[480px] aspect-square rounded-2xl overflow-hidden border border-graphite shadow-[0_25px_60px_rgba(0,0,0,0.95)] group bg-black">
               <Image
                 src="/media/hero/isma-hero-bass.jpg"
                 alt="Isma Ciriaco - Samba for the World Sessions"
@@ -48,12 +48,12 @@ export const DigitalVinylExperience: React.FC = () => {
               />
 
               {/* Minimal Editorial Badge */}
-              <div className="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md px-4 py-3 rounded-xl border border-surface-divider flex items-center justify-between text-xs">
+              <div className="absolute bottom-4 left-4 right-4 bg-black/85 backdrop-blur-md px-4 py-3 rounded-xl border border-graphite flex items-center justify-between text-xs">
                 <div>
                   <span className="font-bold text-white block">Samba for the World</span>
-                  <span className="text-[10px] text-misty/60 font-mono">EDITION NOIR • SESSÕES DE CONTRABAIXO</span>
+                  <span className="text-[10px] text-beige/60 font-mono">EDITION NOIR • SESSÕES DE CONTRABAIXO</span>
                 </div>
-                <span className="text-[10px] font-mono text-crimson-vivid font-bold uppercase">
+                <span className="text-[10px] font-mono text-gold font-bold uppercase">
                   ISMA CIRIACO
                 </span>
               </div>
@@ -63,13 +63,13 @@ export const DigitalVinylExperience: React.FC = () => {
           {/* Discography & Tracklist */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-8">
             <div>
-              <p className="text-base sm:text-lg text-misty/80 leading-relaxed mb-6 font-normal">
+              <p className="text-base sm:text-lg text-beige/80 leading-relaxed mb-6 font-normal">
                 {t.featuredRecord.description}
               </p>
 
               {/* Tracklist selection */}
-              <div className="space-y-2 border-t border-surface-divider pt-4">
-                <span className="text-xs font-bold tracking-widest text-misty/40 uppercase block mb-3">
+              <div className="space-y-2 border-t border-graphite pt-4">
+                <span className="text-xs font-bold tracking-widest text-beige/40 uppercase block mb-3">
                   {t.featuredRecord.tracksTitle}
                 </span>
 
@@ -82,23 +82,23 @@ export const DigitalVinylExperience: React.FC = () => {
                     }}
                     className={`flex items-center justify-between p-3.5 rounded-xl cursor-pointer transition-all ${
                       selectedTrack === idx
-                        ? "bg-surface-elevated border border-crimson-vivid/40 text-white"
-                        : "hover:bg-surface-elevated/50 text-misty/70"
+                        ? "bg-surface-elevated border border-gold/40 text-white"
+                        : "hover:bg-surface-elevated/50 text-beige/70"
                     }`}
                   >
                     <div className="flex items-center gap-3.5">
-                      <span className="text-xs font-mono font-bold text-crimson-vivid">
+                      <span className="text-xs font-mono font-bold text-gold">
                         {track.number}
                       </span>
                       <span className="text-sm font-semibold">{track.title}</span>
                     </div>
 
-                    <div className="flex items-center gap-3 text-xs text-misty/50 font-mono">
+                    <div className="flex items-center gap-3 text-xs text-beige/50 font-mono">
                       {selectedTrack === idx && isPlaying ? (
                         <div className="flex items-end gap-1 h-3.5">
-                          <span className="w-1 bg-crimson-vivid h-full animate-pulse" />
-                          <span className="w-1 bg-crimson-vivid h-2/3 animate-pulse delay-100" />
-                          <span className="w-1 bg-crimson-vivid h-4/5 animate-pulse delay-200" />
+                          <span className="w-1 bg-gold text-black h-full animate-pulse" />
+                          <span className="w-1 bg-gold text-black h-2/3 animate-pulse delay-100" />
+                          <span className="w-1 bg-gold text-black h-4/5 animate-pulse delay-200" />
                         </div>
                       ) : (
                         <span>{track.duration}</span>
@@ -110,11 +110,11 @@ export const DigitalVinylExperience: React.FC = () => {
             </div>
 
             {/* Simulated Player Controls */}
-            <div className="p-4 rounded-2xl bg-surface-elevated border border-surface-divider flex items-center justify-between">
+            <div className="p-4 rounded-2xl bg-surface-elevated border border-graphite flex items-center justify-between">
               <div className="flex items-center gap-3.5">
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="w-11 h-11 rounded-full bg-crimson-vivid text-white flex items-center justify-center hover:scale-105 transition-all shadow-md"
+                  className="w-11 h-11 rounded-full bg-gold text-black text-white flex items-center justify-center hover:scale-105 transition-all shadow-md"
                   aria-label={isPlaying ? "Pausar" : "Reproduzir"}
                 >
                   {isPlaying ? (
@@ -127,13 +127,13 @@ export const DigitalVinylExperience: React.FC = () => {
                   <span className="text-xs font-bold text-white block">
                     {ARTIST_DATA.featuredAlbum.tracks[selectedTrack].title}
                   </span>
-                  <span className="text-[11px] text-misty/50">
+                  <span className="text-[11px] text-beige/50">
                     {isPlaying ? "Reproduzindo trecho instrumental" : "Toque para reproduzir demonstração"}
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-misty/50">
+              <div className="flex items-center gap-2 text-beige/50">
                 <Volume2 className="w-4 h-4" />
               </div>
             </div>
