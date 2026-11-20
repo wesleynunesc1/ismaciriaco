@@ -5,14 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 import { IsmaLogo } from "@/components/ui/IsmaLogo";
-import { PillButton } from "@/components/ui/PillButton";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const { locale, setLocale, t } = useLanguage();
+  const { locale, setLocale } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,13 +22,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { href: "/", label: t.nav.home },
-    { href: "/about", label: t.nav.about },
-    { href: "/music", label: t.nav.music },
-    { href: "/live", label: t.nav.live },
-    { href: "/education", label: t.nav.education },
-    { href: "/epk", label: t.nav.epk },
-    { href: "/contact", label: t.nav.contact },
+    { href: "/", label: locale === "pt" ? "Início" : "Home" },
+    { href: "/about", label: locale === "pt" ? "Biografia" : "Biography" },
+    { href: "/music", label: locale === "pt" ? "Música" : "Music" },
+    { href: "/live", label: locale === "pt" ? "Ao Vivo" : "Live" },
+    { href: "/contact", label: locale === "pt" ? "Contato" : "Contact" },
   ];
 
   return (
@@ -47,7 +44,7 @@ export const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -69,8 +66,8 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Right CTA & Lang Switcher */}
-        <div className="hidden lg:flex items-center gap-5">
+        {/* Right Lang Switcher */}
+        <div className="hidden md:flex items-center gap-4">
           <button
             onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
             className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-graphite text-[11px] font-sans text-beige/70 hover:text-beige hover:border-gold transition-all"
@@ -81,18 +78,10 @@ export const Navbar: React.FC = () => {
             <span className="text-graphite">/</span>
             <span className={locale === "en" ? "text-gold font-semibold" : ""}>EN</span>
           </button>
-
-          <PillButton
-            href="/contact"
-            variant="accent"
-            className="!py-2 !px-4 !text-[11px] uppercase tracking-widest font-sans"
-          >
-            {t.nav.bookCta}
-          </PillButton>
         </div>
 
         {/* Mobile menu trigger */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
             className="px-2.5 py-1 rounded-full border border-graphite text-[10px] font-bold text-beige/80"
@@ -112,7 +101,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] bg-black/98 border-b border-graphite px-6 py-8 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden fixed inset-x-0 top-[60px] bg-black/98 border-b border-graphite px-6 py-8 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -131,17 +120,6 @@ export const Navbar: React.FC = () => {
               );
             })}
           </nav>
-
-          <div className="mt-8 flex flex-col gap-4">
-            <PillButton
-              href="/contact"
-              variant="accent"
-              onClick={() => setIsOpen(false)}
-              className="w-full justify-center !py-3.5"
-            >
-              {t.nav.bookCta}
-            </PillButton>
-          </div>
         </div>
       )}
     </header>

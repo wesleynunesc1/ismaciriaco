@@ -152,28 +152,28 @@ export default function EpkPage() {
               </PillButton>
             </div>
 
-            {/* Direct Booking Contact */}
+            {/* Direct Booking Contact via Rio Groove Productions */}
             <div className="p-6 rounded-3xl bg-surface border border-graphite space-y-4">
-              <span className="text-xs font-mono font-bold text-beige/50 uppercase block">
-                Agenciamento Imediato
+              <span className="text-xs font-mono font-bold text-gold uppercase block">
+                Agenciamento Oficial
               </span>
               <div className="text-xs space-y-2">
                 <p className="font-semibold text-white">
-                  USA: {ARTIST_DATA.contacts.usPhone}
+                  {ARTIST_DATA.contacts.productionName}
                 </p>
-                <p className="font-semibold text-white">
-                  Brasil: {ARTIST_DATA.contacts.brPhone}
+                <p className="text-beige/80">
+                  {ARTIST_DATA.contacts.productionPhone}
+                </p>
+                <p className="text-beige/80">
+                  {ARTIST_DATA.contacts.productionEmail}
                 </p>
               </div>
-              <PillButton
-                href={`https://wa.me/${ARTIST_DATA.contacts.usPhoneRaw.replace(/\D/g, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                className="w-full justify-center text-xs"
+              <a
+                href={`tel:${ARTIST_DATA.contacts.productionPhoneRaw}`}
+                className="w-full justify-center text-xs py-3 rounded-full bg-gold text-black font-semibold inline-flex items-center gap-2 hover:bg-gold-light transition-colors"
               >
-                WhatsApp Booking Direct
-              </PillButton>
+                Contato Rio Groove Productions
+              </a>
             </div>
           </div>
 

@@ -10,22 +10,14 @@ export const BiographySection: React.FC = () => {
         
         {/* Section Heading */}
         <div className="mb-16 pb-8 border-b border-graphite">
-          <span className="font-sans text-xs tracking-epic uppercase text-gold block mb-3 font-medium">
-            BIOGRAFIA OFICIAL
-          </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
             Trajetória, Identidade & Música
           </h2>
         </div>
 
-        {/* Narrative Article Body (Comfortable reading width: ~700px) */}
-        <div className="max-w-[720px] mx-auto space-y-12 font-sans text-base sm:text-lg text-beige/85 leading-[1.85] font-light">
+        {/* Narrative Article Body (Reading width: ~720px) */}
+        <div className="max-w-[720px] mx-auto space-y-10 font-sans text-base sm:text-lg text-beige/85 leading-[1.85] font-light">
           
-          {/* Intro paragraph */}
-          <p className="font-serif text-xl sm:text-2xl text-beige leading-relaxed italic border-l-2 border-gold pl-6 py-1">
-            Isma Ciriaco é um contrabaixista, compositor, produtor musical e educador brasileiro, radicado em Austin, Texas, nos Estados Unidos. Com mais de 35 anos de trajetória profissional, construiu uma carreira marcada pela versatilidade, criatividade e paixão pela música, desenvolvendo uma identidade musical que conecta as raízes brasileiras à sofisticação do jazz contemporâneo.
-          </p>
-
           <p>
             Nascido em Duque de Caxias, no Rio de Janeiro, Isma iniciou sua jornada musical no Brasil, onde desenvolveu uma forte conexão com o samba, a bossa nova, a MPB e a riqueza rítmica da música brasileira. Ao longo dos anos, ampliou seu universo musical incorporando influências do jazz, fusion, funk, soul, R&amp;B e smooth jazz.
           </p>
@@ -54,7 +46,7 @@ export const BiographySection: React.FC = () => {
           </p>
 
           {/* Editorial Portrait Break */}
-          <div className="py-8">
+          <div className="py-6">
             <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-graphite bg-surface">
               <Image
                 src="/media/about/isma-editorial-bw.jpg"

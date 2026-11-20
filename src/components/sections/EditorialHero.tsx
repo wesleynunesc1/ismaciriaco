@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const EditorialHero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen bg-black text-beige flex flex-col justify-end pt-24 pb-16 md:pb-24 overflow-hidden border-b border-graphite">
+    <section className="relative min-h-[95vh] md:min-h-screen bg-black text-beige flex flex-col justify-end pt-28 pb-16 md:pb-24 overflow-hidden border-b border-graphite">
       {/* Background Official Artist Photography (IMG_8904 / isma-hero-official.jpg) */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -16,8 +16,8 @@ export const EditorialHero: React.FC = () => {
           sizes="100vw"
           className="object-cover object-left md:object-center filter contrast-[1.05] brightness-[0.88]"
         />
-        {/* Subtle dark vignettes to blend with black background and enhance typography readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        {/* Layered dark contrast treatment for seamless typography integration */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/70 md:to-transparent" />
       </div>
 
