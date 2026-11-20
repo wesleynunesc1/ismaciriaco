@@ -101,8 +101,8 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bg-black/98 border-b border-graphite px-6 py-8 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-top-4 duration-200">
-          <nav className="flex flex-col gap-4">
+        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-[#080808] z-50 border-b border-graphite px-8 py-10 shadow-2xl flex flex-col justify-between overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
+          <nav className="flex flex-col gap-5">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -110,16 +110,34 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-serif py-2 border-b border-graphite/40 flex items-center justify-between ${
-                    isActive ? "text-gold" : "text-beige hover:text-white"
+                  className={`text-2xl font-serif py-3 border-b border-graphite/60 flex items-center justify-between tracking-wide transition-colors ${
+                    isActive ? "text-gold font-medium" : "text-beige/90 hover:text-white"
                   }`}
                 >
                   <span>{link.label}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-gold" />}
+                  {isActive && <span className="w-2 h-2 rounded-full bg-gold" />}
                 </Link>
               );
             })}
           </nav>
+
+          <div className="pt-8 border-t border-graphite/60 flex flex-col gap-4 text-xs font-sans text-beige/60">
+            <div className="flex items-center justify-between">
+              <span className="uppercase tracking-widest text-[10px] text-gold">Idioma</span>
+              <button
+                onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-graphite text-xs text-beige hover:border-gold"
+              >
+                <Globe className="w-3.5 h-3.5 text-gold" />
+                <span className={locale === "pt" ? "text-gold font-bold" : ""}>PT</span>
+                <span className="text-graphite">/</span>
+                <span className={locale === "en" ? "text-gold font-bold" : ""}>EN</span>
+              </button>
+            </div>
+            <p className="tracking-widest uppercase text-[10px] text-beige/40">
+              Isma Ciriaco • Austin, Texas, USA
+            </p>
+          </div>
         </div>
       )}
     </header>
