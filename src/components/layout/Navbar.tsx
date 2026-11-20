@@ -38,9 +38,12 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Brand Monogram */}
-        <Link href="/" className="group flex items-center">
-          <IsmaLogo size={38} withText={false} />
+        {/* Brand Monogram & Name */}
+        <Link href="/" className="group flex items-center gap-3">
+          <IsmaLogo size={36} withText={false} />
+          <span className="font-serif text-base sm:text-lg tracking-wider text-beige group-hover:text-gold transition-colors uppercase font-medium">
+            ISMA CIRIACO
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
