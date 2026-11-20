@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export const EditorialHero: React.FC = () => {
   return (
-    <section className="relative min-h-screen bg-black text-beige flex flex-col justify-end pt-24 pb-12 sm:pb-16 md:pb-24 overflow-hidden border-b border-graphite">
+    <section className="relative min-h-screen bg-[#080808] text-beige flex flex-col justify-end pt-32 sm:pt-40 md:pt-48 pb-12 sm:pb-16 md:pb-24 overflow-hidden border-b border-graphite">
       {/* Background Official Artist Photography */}
       <div className="absolute inset-0 z-0">
-        {/* Mobile Background: Vertical portrait matching Marcus Miller reference */}
+        {/* Mobile Background: Vertical portrait positioned faithfully to Marcus Miller mobile reference */}
         <div className="relative w-full h-full block md:hidden">
           <Image
             src="/media/hero/isma-hero-vertical.jpg"
@@ -17,11 +17,11 @@ export const EditorialHero: React.FC = () => {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top filter contrast-[1.08] brightness-[0.85]"
+            className="object-cover object-[35%_12%] filter contrast-[1.08] brightness-[0.82]"
           />
-          {/* Gradients tailored for mobile legibility like Marcus Miller site */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90" />
+          {/* Seamless black vignetting: artist seamlessly blends into #080808 */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/80 via-45% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/75 via-transparent to-[#080808]/90" />
         </div>
 
         {/* Desktop Background: Full horizontal stage composition */}
@@ -35,30 +35,19 @@ export const EditorialHero: React.FC = () => {
             className="object-cover object-left lg:object-center filter contrast-[1.05] brightness-[0.88]"
           />
           {/* Layered dark contrast treatment for seamless typography integration */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/70 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/85 via-[#080808]/40 to-[#080808]/70 lg:to-transparent" />
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="max-w-2xl md:max-w-3xl">
           
-          {/* Subtitle / Kicker */}
-          <div className="mb-3 md:mb-4">
-            <span className="font-sans text-[10px] sm:text-[11px] md:text-xs tracking-epic uppercase text-gold font-medium">
+          {/* Subtitle / Kicker - shifted down ~100px on mobile via mt-24 / pt-6 */}
+          <div className="mt-20 sm:mt-24 md:mt-0 mb-4 md:mb-6">
+            <span className="font-sans text-[11px] sm:text-xs tracking-epic uppercase text-gold font-medium">
               Contrabaixista | Compositor | Produtor | Educador
             </span>
-          </div>
-
-          {/* Official Custom Lettering Wordmark (Cleaned - No Bazaart watermark) */}
-          <div className="relative w-[260px] sm:w-[360px] md:w-[480px] lg:w-[540px] h-[75px] sm:h-[105px] md:h-[140px] mb-4 md:mb-6 -ml-1 sm:-ml-2 md:-ml-3">
-            <Image
-              src="/media/brands/isma-ciriaco-wordmark.png"
-              alt="ISMA CIRIACO"
-              fill
-              priority
-              className="object-contain object-left filter brightness-110 drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
-            />
           </div>
 
           {/* Editorial Hook inspired by Marcus Miller reference */}
