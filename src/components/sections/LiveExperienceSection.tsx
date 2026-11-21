@@ -92,7 +92,7 @@ export const LiveExperienceSection: React.FC = () => {
                 AO VIVO NO JAZZ CLUB
               </span>
               <p className="text-sm font-sans text-white font-medium">
-                Isma Ciriaco — Solo & Interação Rítmica ao Contrabaixo
+                Isma Ciriaco — AO VIVO NO PARKER JAZZ CLUB COM RIQUE PANTOJA IN AUSTIN.TX
               </p>
             </div>
             <div className="flex items-center gap-4 text-xs font-sans text-beige/60">
