@@ -5,7 +5,7 @@ import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 interface TrackVideo {
   id: string;
-  label: string;
+  title: string;
   videoSrc: string;
   posterSrc: string;
 }
@@ -13,27 +13,21 @@ interface TrackVideo {
 const TRACKS: TrackVideo[] = [
   {
     id: "track-1",
-    label: "Before & After • Performance 01",
+    title: "BEFORE AND AFTER",
     videoSrc: "/media/video/track-preview-01.mp4",
     posterSrc: "/media/video/track-preview-01-poster.jpg",
   },
   {
     id: "track-2",
-    label: "Before & After • Performance 02",
+    title: "RIO AT NIGHT",
     videoSrc: "/media/video/track-preview-02.mp4",
     posterSrc: "/media/video/track-preview-02-poster.jpg",
   },
   {
     id: "track-3",
-    label: "Before & After • Performance 03",
+    title: "URBAN JAZZ",
     videoSrc: "/media/video/track-preview-03.mp4",
     posterSrc: "/media/video/track-preview-03-poster.jpg",
-  },
-  {
-    id: "track-4",
-    label: "Performance / Isma Ciriaco",
-    videoSrc: "/media/video/track-preview-04.mp4",
-    posterSrc: "/media/video/track-preview-04-poster.jpg",
   },
 ];
 
@@ -71,9 +65,9 @@ export const MusicVideoShowcase: React.FC = () => {
     <section className="relative py-20 md:py-28 bg-[#080808] text-beige overflow-hidden border-b border-graphite">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TRACKS.map((track, idx) => {
+        {/* Video Cards Grid - 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {TRACKS.map((track) => {
             const isPlaying = playingId === track.id;
 
             return (
@@ -118,13 +112,6 @@ export const MusicVideoShowcase: React.FC = () => {
                     </button>
                   </div>
 
-                  {/* Track Number Badge */}
-                  <div className="absolute top-4 left-4 z-20">
-                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase px-2.5 py-1 rounded bg-black/80 border border-graphite text-gold backdrop-blur-sm">
-                      0{idx + 1}
-                    </span>
-                  </div>
-
                   {/* Audio Mute/Unmute quick control */}
                   <button
                     type="button"
@@ -137,34 +124,14 @@ export const MusicVideoShowcase: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Text and Actions directly below each video */}
-                <div className="p-4 bg-black border-t border-graphite/40 flex flex-col gap-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-sans font-semibold tracking-wider text-gold uppercase">
-                      {track.label}
-                    </span>
-                    <span className="text-[10px] font-mono tracking-wider text-beige/40 uppercase">
-                      Ao Vivo
-                    </span>
-                  </div>
-
-                  <div className="pt-2 border-t border-graphite/30 flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => togglePlay(track.id)}
-                      className="text-xs font-sans tracking-widest uppercase font-semibold text-white group-hover:text-gold inline-flex items-center gap-1.5 transition-colors"
-                    >
-                      <span>{isPlaying ? "Pausar" : "Assistir"}</span>
-                      {isPlaying ? (
-                        <Pause className="w-3 h-3 text-gold" />
-                      ) : (
-                        <Play className="w-3 h-3 fill-gold text-gold" />
-                      )}
-                    </button>
-                    <span className="text-[10px] text-beige/50 font-sans">
-                      Contrabaixo
-                    </span>
-                  </div>
+                {/* Refined Minimalist Title - Centered horizontal editorial typography */}
+                <div 
+                  className="py-5 px-4 bg-black border-t border-graphite/40 text-center cursor-pointer transition-colors group-hover:bg-surface/50"
+                  onClick={() => togglePlay(track.id)}
+                >
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide uppercase text-beige/95 group-hover:text-gold transition-colors">
+                    {track.title}
+                  </h3>
                 </div>
 
               </div>
