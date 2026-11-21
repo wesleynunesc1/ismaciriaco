@@ -29,6 +29,12 @@ const TRACKS: TrackVideo[] = [
     videoSrc: "/media/video/track-preview-03.mp4",
     posterSrc: "/media/video/track-preview-03-poster.jpg",
   },
+  {
+    id: "track-4",
+    title: "PERFORMANCE",
+    videoSrc: "/media/video/track-preview-04.mp4",
+    posterSrc: "/media/video/track-preview-04-poster.jpg",
+  },
 ];
 
 export const MusicVideoShowcase: React.FC = () => {
@@ -65,8 +71,8 @@ export const MusicVideoShowcase: React.FC = () => {
     <section className="relative py-20 md:py-28 bg-[#080808] text-beige overflow-hidden border-b border-graphite">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Video Cards Grid - 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Video Cards Grid - 4 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {TRACKS.map((track) => {
             const isPlaying = playingId === track.id;
 
