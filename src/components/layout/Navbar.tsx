@@ -21,6 +21,23 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  // Close menu on navigation change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   const navLinks = [
     { href: "/", label: locale === "pt" ? "Início" : "Home" },
     { href: "/about", label: locale === "pt" ? "Biografia" : "Biography" },
@@ -104,8 +121,11 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-[#080808] z-50 border-b border-graphite px-8 py-10 shadow-2xl flex flex-col justify-between overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col gap-5">
+        <div 
+          style={{ top: "68px", height: "calc(100dvh - 68px)" }}
+          className="md:hidden fixed inset-x-0 bottom-0 bg-[#080808] z-50 border-b border-graphite px-8 py-8 shadow-2xl flex flex-col justify-between overflow-y-auto animate-in fade-in duration-150"
+        >
+          <nav className="flex flex-col gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -124,12 +144,13 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          <div className="pt-8 border-t border-graphite/60 flex flex-col gap-4 text-xs font-sans text-beige/60">
+          <div className="pt-6 border-t border-graphite/60 flex flex-col gap-4 text-xs font-sans text-beige/60">
             <div className="flex items-center justify-between">
-              <span className="uppercase tracking-widest text-[10px] text-gold">Idioma</span>
+              <span className="uppercase tracking-widest text-[10px] text-gold font-medium">Idioma / Language</span>
               <button
+                type="button"
                 onClick={() => setLocale(locale === "pt" ? "en" : "pt")}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-graphite text-xs text-beige hover:border-gold"
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-graphite bg-surface text-xs text-beige hover:border-gold active:scale-95 transition-all"
               >
                 <Globe className="w-3.5 h-3.5 text-gold" />
                 <span className={locale === "pt" ? "text-gold font-bold" : ""}>PT</span>

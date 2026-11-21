@@ -3,8 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { ARTIST_DATA } from "@/data/artist";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const BaixoBrazilAnnouncement: React.FC = () => {
+  const { locale } = useLanguage();
+
   return (
     <section className="py-20 md:py-28 bg-surface border-t border-graphite text-beige relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
@@ -23,7 +26,7 @@ export const BaixoBrazilAnnouncement: React.FC = () => {
           {/* Announcement Copy */}
           <div className="flex-1 text-center md:text-left space-y-4">
             <div className="inline-block px-3 py-1 rounded-full bg-graphite border border-graphite text-[10px] font-sans font-bold uppercase tracking-widest text-gold">
-              PROJETO EDUCACIONAL
+              {locale === "en" ? "EDUCATIONAL PROJECT" : "PROJETO EDUCACIONAL"}
             </div>
 
             <h3 className="font-serif text-3xl sm:text-4xl text-white tracking-wide">
@@ -31,11 +34,13 @@ export const BaixoBrazilAnnouncement: React.FC = () => {
             </h3>
 
             <p className="font-serif italic text-lg sm:text-xl text-gold leading-relaxed">
-              {ARTIST_DATA.courseAnnouncement.subtitle}
+              {locale === "en" ? "Three editions. A Brazilian musical experience." : ARTIST_DATA.courseAnnouncement.subtitle}
             </p>
 
             <p className="font-sans text-sm sm:text-base text-beige/80 leading-relaxed font-light">
-              {ARTIST_DATA.courseAnnouncement.description}
+              {locale === "en"
+                ? "An immersive methodology dedicated to the language, phrasing, and percussive foundation of the Brazilian electric bass, from foundational grooves to advanced contemporary jazz improvisation."
+                : ARTIST_DATA.courseAnnouncement.description}
             </p>
 
             {/* Three Editions Tags */}
@@ -54,7 +59,7 @@ export const BaixoBrazilAnnouncement: React.FC = () => {
             <div className="pt-3">
               <span className="font-sans text-xs tracking-widest uppercase font-bold text-gold inline-flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                {ARTIST_DATA.courseAnnouncement.platformStatus}
+                {locale === "en" ? "Coming soon to streaming and education platforms." : ARTIST_DATA.courseAnnouncement.platformStatus}
               </span>
             </div>
           </div>

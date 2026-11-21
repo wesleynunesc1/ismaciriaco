@@ -53,6 +53,8 @@ export const LiveExperienceSection: React.FC = () => {
             <video
               ref={videoRef}
               src="/media/video/live-performance-concert.mp4"
+              poster="/media/video/live-performance-poster.jpg"
+              preload="auto"
               playsInline
               controls
               className="w-full h-full object-contain bg-black"
