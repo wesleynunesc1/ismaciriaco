@@ -27,6 +27,12 @@ export const ARTIST_DATA = {
     productionInstagramHandle: "@rio_groove_production",
     artistInstagram: "https://www.instagram.com/ciriacoisma/",
     artistInstagramHandle: "@ciriacoisma",
+    artistYouTube: "https://youtube.com/@ciriacoisma?si=YA7fQRPyVnQtG_mm",
+    artistYouTubeHandle: "@ciriacoisma",
+    artistTikTok: "https://www.tiktok.com/@ciriacoisma?_r=1&_t=ZP-9Bb6oPWOlVl",
+    artistTikTokHandle: "@ciriacoisma",
+    artistFacebook: "https://www.facebook.com/share/151TAot87Xm/?mibextid=wwXIfr",
+    artistFacebookHandle: "Isma Ciriaco",
   },
   genres: [
     "Brazilian Jazz",

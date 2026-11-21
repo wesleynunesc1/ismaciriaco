@@ -119,7 +119,37 @@ export const Footer: React.FC = () => {
                   className="inline-flex items-center gap-2 text-beige hover:text-gold transition-colors"
                 >
                   <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
-                  <span>Instagram Artista: {ARTIST_DATA.contacts.artistInstagramHandle}</span>
+                  <span>Instagram: {ARTIST_DATA.contacts.artistInstagramHandle}</span>
+                </a>
+
+                <a
+                  href={ARTIST_DATA.contacts.artistYouTube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-beige hover:text-gold transition-colors"
+                >
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                  <span>YouTube: {ARTIST_DATA.contacts.artistYouTubeHandle}</span>
+                </a>
+
+                <a
+                  href={ARTIST_DATA.contacts.artistTikTok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-beige hover:text-gold transition-colors"
+                >
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                  <span>TikTok: {ARTIST_DATA.contacts.artistTikTokHandle}</span>
+                </a>
+
+                <a
+                  href={ARTIST_DATA.contacts.artistFacebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-beige hover:text-gold transition-colors"
+                >
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                  <span>Facebook: {ARTIST_DATA.contacts.artistFacebookHandle}</span>
                 </a>
               </div>
             </div>

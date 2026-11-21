@@ -5,33 +5,25 @@ import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 interface TrackVideo {
   id: string;
-  title: string;
-  genre: string;
-  description: string;
   videoSrc: string;
 }
 
 const TRACKS: TrackVideo[] = [
   {
     id: "track-1",
-    title: "Samba For The World",
-    genre: "Samba Jazz / Fusion",
-    description: "Fraseados sincopados de contrabaixo sobre pulso dinâmico de samba contemporâneo.",
     videoSrc: "/media/video/track-preview-01.mp4",
   },
   {
     id: "track-2",
-    title: "Groove & Raízes Brasileiras",
-    genre: "Brazilian Groove / Bass Lead",
-    description: "Linhas percussivas com peso harmônico, destacando a precisão do ataque e pegada.",
     videoSrc: "/media/video/track-preview-02.mp4",
   },
   {
     id: "track-3",
-    title: "Harmonia & Improvisação Jazz",
-    genre: "Contemporary Jazz / Latin Bass",
-    description: "Diálogo harmônico sofisticado unindo melodias brasileiras e liberdade jazzística.",
     videoSrc: "/media/video/track-preview-03.mp4",
+  },
+  {
+    id: "track-4",
+    videoSrc: "/media/video/track-preview-04.mp4",
   },
 ];
 
@@ -69,21 +61,8 @@ export const MusicVideoShowcase: React.FC = () => {
     <section className="relative py-20 md:py-28 bg-[#080808] text-beige overflow-hidden border-b border-graphite">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mb-14">
-          <span className="font-sans text-[11px] font-bold tracking-widest text-gold uppercase block mb-3">
-            AUDIÇÃO EXCLUSIVA • PRÉVIAS EM VÍDEO
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white tracking-wide uppercase mb-4">
-            A Música em Primeira Mão.
-          </h2>
-          <p className="font-sans text-sm sm:text-base text-beige/80 leading-relaxed font-light">
-            Três registros originais em vídeo apresentando as composições, grooves e a linguagem instrumental de Isma Ciriaco no contrabaixo elétrico.
-          </p>
-        </div>
-
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {TRACKS.map((track, idx) => {
             const isPlaying = playingId === track.id;
 
@@ -94,7 +73,7 @@ export const MusicVideoShowcase: React.FC = () => {
               >
                 {/* Video Player Box */}
                 <div 
-                  className="relative aspect-[9/16] sm:aspect-[4/5] md:aspect-[9/16] bg-black overflow-hidden cursor-pointer"
+                  className="relative aspect-[9/16] bg-black overflow-hidden cursor-pointer"
                   onClick={() => togglePlay(track.id)}
                 >
                   <video
@@ -131,7 +110,7 @@ export const MusicVideoShowcase: React.FC = () => {
                   {/* Track Number Badge */}
                   <div className="absolute top-4 left-4 z-20">
                     <span className="text-[10px] font-mono font-bold tracking-widest uppercase px-2.5 py-1 rounded bg-black/80 border border-graphite text-gold backdrop-blur-sm">
-                      FAIXA 0{idx + 1}
+                      VÍDEO 0{idx + 1}
                     </span>
                   </div>
 
@@ -147,43 +126,41 @@ export const MusicVideoShowcase: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Track Info Card */}
-                <div className="p-6 flex flex-col justify-between flex-1 border-t border-graphite/60">
-                  <div>
-                    <span className="text-[10px] font-sans font-semibold tracking-widest text-gold uppercase block mb-1">
-                      {track.genre}
-                    </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">
-                      {track.title}
-                    </h3>
-                    <p className="font-sans text-xs sm:text-sm text-beige/70 leading-relaxed font-light">
-                      {track.description}
-                    </p>
-                  </div>
-
-                  {/* Interactive Button */}
-                  <div className="mt-6 pt-4 border-t border-graphite/40 flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => togglePlay(track.id)}
-                      className="text-xs font-sans tracking-widest uppercase font-semibold text-gold hover:text-white inline-flex items-center gap-2 transition-colors"
-                    >
-                      <span>{isPlaying ? "Pausar Prévia" : "Ouvir Prévia"}</span>
-                      {isPlaying ? (
-                        <Pause className="w-3.5 h-3.5" />
-                      ) : (
-                        <Play className="w-3.5 h-3.5 fill-current" />
-                      )}
-                    </button>
-                    <span className="text-[10px] font-mono tracking-wider text-beige/40 uppercase">
-                      Áudio Direto
-                    </span>
-                  </div>
+                {/* Quick Play Action Bar */}
+                <div className="p-4 bg-black border-t border-graphite/40 flex items-center justify-between">
+                  <button
+                    type="button"
+                    onClick={() => togglePlay(track.id)}
+                    className="text-xs font-sans tracking-widest uppercase font-semibold text-gold hover:text-white inline-flex items-center gap-2 transition-colors"
+                  >
+                    <span>{isPlaying ? "Pausar" : "Assistir"}</span>
+                    {isPlaying ? (
+                      <Pause className="w-3.5 h-3.5" />
+                    ) : (
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                    )}
+                  </button>
+                  <span className="text-[10px] font-mono tracking-wider text-beige/40 uppercase">
+                    Áudio Direto
+                  </span>
                 </div>
 
               </div>
             );
           })}
+        </div>
+
+        {/* Section Description placed BELOW the videos as requested */}
+        <div className="max-w-3xl mt-14 pt-10 border-t border-graphite/60">
+          <span className="font-sans text-[11px] font-bold tracking-widest text-gold uppercase block mb-3">
+            AUDIÇÃO EXCLUSIVA • REGISTROS EM VÍDEO
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white tracking-wide uppercase mb-4">
+            A Música em Primeira Mão.
+          </h2>
+          <p className="font-sans text-sm sm:text-base text-beige/80 leading-relaxed font-light">
+            Registros originais em vídeo apresentando as composições, grooves e a linguagem instrumental de Isma Ciriaco no contrabaixo elétrico.
+          </p>
         </div>
 
       </div>

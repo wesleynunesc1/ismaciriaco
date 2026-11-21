@@ -127,7 +127,70 @@ export default function ContactPage() {
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                 </svg>
-                <span>Acessar Perfil do Artista</span>
+                <span>Acessar Instagram</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+
+            {/* YouTube */}
+            <div className="p-6 rounded-2xl bg-black border border-graphite flex flex-col justify-between space-y-3">
+              <div>
+                <span className="font-sans text-[10px] tracking-widest text-gold uppercase block mb-1">
+                  Canal Oficial YouTube
+                </span>
+                <span className="font-sans text-base font-medium text-white block">
+                  {ARTIST_DATA.contacts.artistYouTubeHandle}
+                </span>
+              </div>
+              <a
+                href={ARTIST_DATA.contacts.artistYouTube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-white transition-colors pt-2"
+              >
+                <span>Inscrever-se no Canal</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+
+            {/* TikTok */}
+            <div className="p-6 rounded-2xl bg-black border border-graphite flex flex-col justify-between space-y-3">
+              <div>
+                <span className="font-sans text-[10px] tracking-widest text-gold uppercase block mb-1">
+                  TikTok Oficial
+                </span>
+                <span className="font-sans text-base font-medium text-white block">
+                  {ARTIST_DATA.contacts.artistTikTokHandle}
+                </span>
+              </div>
+              <a
+                href={ARTIST_DATA.contacts.artistTikTok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-white transition-colors pt-2"
+              >
+                <span>Seguir no TikTok</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+
+            {/* Facebook */}
+            <div className="p-6 rounded-2xl bg-black border border-graphite flex flex-col justify-between space-y-3">
+              <div>
+                <span className="font-sans text-[10px] tracking-widest text-gold uppercase block mb-1">
+                  Facebook Oficial
+                </span>
+                <span className="font-sans text-base font-medium text-white block">
+                  {ARTIST_DATA.contacts.artistFacebookHandle}
+                </span>
+              </div>
+              <a
+                href={ARTIST_DATA.contacts.artistFacebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-white transition-colors pt-2"
+              >
+                <span>Acompanhar no Facebook</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
