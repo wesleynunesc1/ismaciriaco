@@ -17,11 +17,10 @@ export const EditorialHero: React.FC = () => {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[35%_12%] filter contrast-[1.08] brightness-[0.82]"
+            className="object-cover object-[35%_12%] filter contrast-[1.02] brightness-110"
           />
-          {/* Seamless black vignetting: artist seamlessly blends into #080808 */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/80 via-45% to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/75 via-transparent to-[#080808]/90" />
+          {/* Suave degradê apenas na base inferior para garantir legibilidade dos botões/texto sem escurecer a foto */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/90 via-[#080808]/40 via-30% to-transparent" />
         </div>
 
         {/* Desktop Background: Full horizontal stage composition */}
@@ -32,11 +31,11 @@ export const EditorialHero: React.FC = () => {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-left lg:object-center filter contrast-[1.05] brightness-[0.88]"
+            className="object-cover object-left lg:object-center filter contrast-[1.02] brightness-110"
           />
-          {/* Layered dark contrast treatment for seamless typography integration */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/45 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/85 via-[#080808]/40 to-[#080808]/70 lg:to-transparent" />
+          {/* Degradê sutil à esquerda e na base apenas para legibilidade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/70 via-[#080808]/25 to-transparent" />
         </div>
       </div>
 
@@ -80,9 +79,23 @@ export const EditorialHero: React.FC = () => {
           <div className="pt-4 md:pt-6 border-t border-graphite/80 flex flex-wrap items-center gap-4 sm:gap-6 text-[10px] sm:text-[11px] font-sans tracking-widest text-beige/60 uppercase">
             <span>Austin, Texas, USA</span>
             <span className="text-graphite">•</span>
-            <span>DR Strings</span>
+            <a
+              href="https://www.drstrings.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold transition-colors inline-flex items-center gap-1"
+            >
+              DR Strings ↗
+            </a>
             <span className="text-graphite">•</span>
-            <span>Aguilar Amplification</span>
+            <a
+              href="https://aguilaramp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold transition-colors inline-flex items-center gap-1"
+            >
+              Aguilar Amplification ↗
+            </a>
           </div>
 
         </div>

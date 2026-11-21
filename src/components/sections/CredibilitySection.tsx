@@ -60,56 +60,70 @@ export const CredibilitySection: React.FC = () => {
 
             <div className="space-y-4">
               {/* DR STRINGS Partner Card */}
-              <div className="p-6 rounded-2xl bg-black border border-graphite flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="relative h-10 w-28">
-                      <Image
-                        src="/media/brands/aguilar-partner.png"
-                        alt="DR Strings Official Brand"
-                        fill
-                        className="object-contain object-left filter contrast-125"
-                      />
-                    </div>
-                    <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded bg-graphite text-gold font-bold">
-                      OFFICIAL ENDORSER
-                    </span>
-                  </div>
-                  <h4 className="font-serif text-xl font-bold text-white">DR Handmade Strings</h4>
-                  <span className="text-xs font-sans text-gold block mb-2">
-                    Handmade in USA • Bass Strings
-                  </span>
-                  <p className="text-xs font-sans text-beige/70 leading-relaxed font-light">
-                    Precisão, timbre quente e durabilidade essencial para o fraseado e pegada do contrabaixo jazz.
-                  </p>
-                </div>
-              </div>
-
-              {/* AGUILAR AMPLIFICATION Partner Card */}
-              <div className="p-6 rounded-2xl bg-black border border-graphite flex flex-col justify-between">
+              <a
+                href="https://www.drstrings.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-6 rounded-2xl bg-black border border-graphite hover:border-gold/60 transition-all duration-300 flex flex-col justify-between block"
+              >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="relative h-10 w-28">
                       <Image
                         src="/media/brands/dr-strings-partner.png"
+                        alt="DR Strings Official Brand"
+                        fill
+                        className="object-contain object-left filter contrast-125"
+                      />
+                    </div>
+                    <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded bg-graphite text-gold font-bold group-hover:bg-gold group-hover:text-black transition-colors">
+                      OFFICIAL ENDORSER ↗
+                    </span>
+                  </div>
+                  <h4 className="font-serif text-xl font-bold text-white group-hover:text-gold transition-colors">
+                    DR Handmade Strings
+                  </h4>
+                  <span className="text-xs font-sans text-gold block mb-2">
+                    Handmade in USA • drstrings.com
+                  </span>
+                  <p className="text-xs font-sans text-beige/70 leading-relaxed font-light">
+                    Precisão, timbre quente e durabilidade essencial para o fraseado e pegada do contrabaixo jazz.
+                  </p>
+                </div>
+              </a>
+
+              {/* AGUILAR AMPLIFICATION Partner Card */}
+              <a
+                href="https://aguilaramp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-6 rounded-2xl bg-black border border-graphite hover:border-gold/60 transition-all duration-300 flex flex-col justify-between block"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="relative h-10 w-28">
+                      <Image
+                        src="/media/brands/aguilar-partner.png"
                         alt="Aguilar Amplification NYC Official Brand"
                         fill
                         className="object-contain object-left filter contrast-125"
                       />
                     </div>
-                    <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded bg-graphite text-gold font-bold">
-                      OFFICIAL ENDORSER
+                    <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded bg-graphite text-gold font-bold group-hover:bg-gold group-hover:text-black transition-colors">
+                      OFFICIAL ENDORSER ↗
                     </span>
                   </div>
-                  <h4 className="font-serif text-xl font-bold text-white">Aguilar Amplification NYC</h4>
+                  <h4 className="font-serif text-xl font-bold text-white group-hover:text-gold transition-colors">
+                    Aguilar Amplification NYC
+                  </h4>
                   <span className="text-xs font-sans text-gold block mb-2">
-                    World Class Bass Amplification & Pickups
+                    World Class Bass Gear • aguilaramp.com
                   </span>
                   <p className="text-xs font-sans text-beige/70 leading-relaxed font-light">
                     Fidelidade acústica impecável, definição harmônica de graves e presença de palco em turnês mundiais.
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 

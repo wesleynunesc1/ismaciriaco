@@ -2,6 +2,7 @@
 
 import React from "react";
 import { DigitalVinylExperience } from "@/components/sections/DigitalVinylExperience";
+import { MusicVideoShowcase } from "@/components/sections/MusicVideoShowcase";
 import { BaixoBrazilAnnouncement } from "@/components/sections/BaixoBrazilAnnouncement";
 
 export default function MusicPage() {
@@ -25,6 +26,9 @@ export default function MusicPage() {
 
       {/* Featured Vinyl Experience Component (Real Album Art + Em breve em todas as plataformas) */}
       <DigitalVinylExperience />
+
+      {/* 3 Real Music Video Showcases */}
+      <MusicVideoShowcase />
 
       {/* Compact Baixo Brazil Announcement */}
       <BaixoBrazilAnnouncement />

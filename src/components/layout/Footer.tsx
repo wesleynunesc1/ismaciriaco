@@ -131,7 +131,16 @@ export const Footer: React.FC = () => {
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between text-[11px] font-sans text-beige/40 gap-3">
           <p>© {new Date().getFullYear()} Isma Ciriaco. Todos os direitos reservados.</p>
           <p>Brazilian Bass Player | Austin, Texas, USA</p>
-          <p>Endorsements: DR Strings | Aguilar Amplification</p>
+          <p>
+            Endorsements:{" "}
+            <a href="https://www.drstrings.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+              DR Strings
+            </a>{" "}
+            |{" "}
+            <a href="https://aguilaramp.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+              Aguilar Amplification
+            </a>
+          </p>
         </div>
       </div>
     </footer>

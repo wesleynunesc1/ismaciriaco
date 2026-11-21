@@ -98,35 +98,45 @@ export default function EpkPage() {
                 03 • ENDORSEMENTS & CHANCELA
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-graphite">
+                <a
+                  href="https://www.drstrings.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-graphite hover:border-gold/60 transition-colors group"
+                >
                   <div className="relative w-20 h-10 shrink-0">
                     <Image
-                      src="/media/brands/aguilar-partner.png"
+                      src="/media/brands/dr-strings-partner.png"
                       alt="DR Strings Logo"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-white block">DR Handmade Strings</span>
+                    <span className="text-xs font-bold text-white group-hover:text-gold transition-colors block">DR Handmade Strings ↗</span>
                     <span className="text-[10px] text-gold font-mono">Official Artist Endorser</span>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-graphite">
+                <a
+                  href="https://aguilaramp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-surface-elevated border border-graphite hover:border-gold/60 transition-colors group"
+                >
                   <div className="relative w-20 h-10 shrink-0">
                     <Image
-                      src="/media/brands/dr-strings-partner.png"
+                      src="/media/brands/aguilar-partner.png"
                       alt="Aguilar Amplification Logo"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-white block">Aguilar Amplification NYC</span>
+                    <span className="text-xs font-bold text-white group-hover:text-gold transition-colors block">Aguilar Amplification NYC ↗</span>
                     <span className="text-[10px] text-gold font-mono">Official Artist Endorser</span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
